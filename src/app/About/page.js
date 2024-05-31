@@ -270,7 +270,7 @@ const page = () => {
 
       <div class="grid grid-cols-1 md:grid-cols-4  mt-12  pb-20 w-5/6 m-auto">
         {Teammembers.map((team) => (
-          <div class="px-20 mt-10 md:p-4">
+          <div class="px-20 mt-10 md:p-4" key={team.name}>
             <div class="cardtext1 border-2 border-gray-300 rounded-lg shadow-md p-4 text-center h-[500px] hover:border-2 hover:border-custom-blue filter grayscale hover:filter-none transition duration-300">
               <div class="row">
                 <div class="col-md-12 flex justify-center rounded-full">

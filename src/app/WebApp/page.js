@@ -150,7 +150,10 @@ const WebAPP = () => {
           <div className=" grid grid-cols-2 md:grid-cols-6 gap-5 w-5/6 mt-10">
             {Webapps.map((items) => {
               return (
-                <div className=" bg-gray-200 rounded-md border-black p-4 gap-5 text-center flex flex-col justify-center items-center">
+                <div
+                  key={items.name}
+                  className=" bg-gray-200 rounded-md border-black p-4 gap-5 text-center flex flex-col justify-center items-center"
+                >
                   <Image src={items.image} width={100} height={100} />
                   <span>{items.name}</span>
                 </div>
@@ -218,7 +221,10 @@ const WebAPP = () => {
           <div className=" grid grid-cols-2 md:grid-cols-6 gap-5 w-5/6 mt-24">
             {WebSecapps.map((items) => {
               return (
-                <div className=" bg-gray-200 rounded-xl border-black p-9 text-center flex flex-col justify-between items-center gap-5">
+                <div
+                  key={items.name}
+                  className=" bg-gray-200 rounded-xl border-black p-9 text-center flex flex-col justify-between items-center gap-5"
+                >
                   <Image src={items.image} width={200} height={200} />
                   <span>{items.name}</span>
                 </div>
@@ -250,7 +256,10 @@ const WebAPP = () => {
           <div className=" grid grid-cols-2 md:grid-cols-6 gap-8 mt-20 pb-16 w-5/6">
             {Webeappslogo.map((items) => {
               return (
-                <div className="border-2 border-gray-400 p-14 text-center flex flex-col gap-12 justify-between items-center rounded-xl ">
+                <div
+                  key={items.name}
+                  className="border-2 border-gray-400 p-14 text-center flex flex-col gap-12 justify-between items-center rounded-xl "
+                >
                   <Image
                     src={items.image}
                     className="rounded-lg"

@@ -146,7 +146,10 @@ const MobileApp = () => {
           <div className=" grid grid-cols-2 md:grid-cols-5 gap-8 mt-10">
             {Mobileapps.map((items) => {
               return (
-                <div className=" bg-gray-200 rounded-md border-black p-10 text-center flex flex-col justify-between items-center gap-4">
+                <div
+                  key={items.name}
+                  className=" bg-gray-200 rounded-md border-black p-10 text-center flex flex-col justify-between items-center gap-4"
+                >
                   <Image src={items.image} width={50} height={50} />
                   <span>{items.name}</span>
                 </div>
@@ -257,7 +260,10 @@ const MobileApp = () => {
           <div className=" grid grid-cols-2 md:grid-cols-6 gap-8 mt-20  w-5/6">
             {Mobileappslogo.map((items) => {
               return (
-                <div className="border-2 border-gray-300 px-16 py-10 text-center flex flex-col gap-12 justify-between items-center rounded-lg ">
+                <div
+                  key={items.name}
+                  className="border-2 border-gray-300 px-16 py-10 text-center flex flex-col gap-12 justify-between items-center rounded-lg "
+                >
                   <Image
                     src={items.image}
                     className="rounded-lg"

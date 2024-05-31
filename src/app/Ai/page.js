@@ -286,7 +286,10 @@ const Ai = () => {
           <div className=" grid grid-cols-2 md:grid-cols-6 gap-8 mt-20 pb-20 w-5/6">
             {Aiappslogo.map((items) => {
               return (
-                <div className="border-2 border-gray-400 p-8 text-center flex flex-col gap-20  justify-between items-center rounded-lg ">
+                <div
+                  key={items.name}
+                  className="border-2 border-gray-400 p-8 text-center flex flex-col gap-20  justify-between items-center rounded-lg "
+                >
                   <Image
                     src={items.image}
                     className="rounded-lg"
