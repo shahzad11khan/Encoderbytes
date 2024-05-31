@@ -69,10 +69,12 @@ const Services = () => {
         </div>
         {/* iamge */}
         <div className="bg-yellow w-full md:w-[50%] h-auto md:h-full relative">
-          <img
+          <Image
             src="/backgrounds/Rectangle-29.png"
             alt="Logo"
             className="object-cover w-full h-full"
+            width={400}
+            height={400}
           />
         </div>
       </div>
@@ -121,10 +123,12 @@ const Services = () => {
       <section className=" pb-10 pt-10 W-5/6">
         <div className="flex flex-col md:flex-row justify-center items-center px-6 md:px-32 mt-20 md:mt-20 gap-y-8 md:gap-x-8  m-auto p-5 rounded-md">
           <div className="bg-yellow w-full md:w-[50%] h-auto md:h-full relative">
-            <img
+            <Image
               src="/backgrounds/Mask-group5.png"
               alt="Logo"
               className="object-cover w-full h-full"
+              width={400}
+              height={400}
             />
           </div>
           <div className="flex flex-col justify-center items-center md:items-start gap-y-5 text-center md:text-left md:w-[50%]">
@@ -177,19 +181,23 @@ const Services = () => {
 
           {/* iamge */}
           <div className="bg-yellow w-full md:w-[50%] h-auto md:h-full relative">
-            <img
+            <Image
               src="/backgrounds/Mask-group6.png"
               alt="Logo"
               className="object-cover w-full h-full"
+              width={400}
+              height={400}
             />
           </div>
         </div>
         <div className="flex flex-col md:flex-row justify-center items-center px-6 md:px-32 mt-20 md:mt-20 gap-y-8 md:gap-x-8   m-auto p-5 rounded-md">
           <div className="bg-yellow w-full md:w-[50%] h-auto md:h-full relative">
-            <img
+            <Image
               src="/backgrounds/Mask-group7.png"
               alt="Logo"
               className="object-cover w-full h-full"
+              width={400}
+              height={400}
             />
           </div>
           <div className="flex flex-col justify-center items-center md:items-start gap-y-5 text-center md:text-left md:w-[50%]">
@@ -237,7 +245,10 @@ const Services = () => {
           <div className=" grid grid-cols-2 md:grid-cols-4 gap-8 mt-20 pb-20 w-10/12">
             {CostOfSoftware.map((items) => {
               return (
-                <div className="border-2 border-gray-400 px-2  py-3 text-center flex flex-col gap-5 outline-none border-none justify-between items-center rounded-lg bg-white text-xl">
+                <div
+                  key={items.name}
+                  className="border-2 border-gray-400 px-2  py-3 text-center flex flex-col gap-5 outline-none border-none justify-between items-center rounded-lg bg-white text-xl"
+                >
                   <Image
                     alt="image"
                     width={200}

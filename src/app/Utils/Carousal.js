@@ -103,7 +103,7 @@
 
 // export default Carousal;
 "use client";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import Image from "next/image";
 
 const Carousal = () => {
@@ -130,15 +130,15 @@ const Carousal = () => {
 
   const [currentSlideIndex, setCurrentSlideIndex] = useState(0);
 
-  const autoChangeSlide = () => {
+  const autoChangeSlide = useCallback(() => {
     const newIndex = (currentSlideIndex + 1) % slides.length;
     setCurrentSlideIndex(newIndex);
-  };
+  }, [currentSlideIndex, slides.length]);
 
   useEffect(() => {
     const intervalId = setInterval(autoChangeSlide, 3000);
     return () => clearInterval(intervalId);
-  }, [currentSlideIndex, autoChangeSlide]);
+  }, [autoChangeSlide]);
 
   const handleDotClick = (index) => {
     setCurrentSlideIndex(index);
