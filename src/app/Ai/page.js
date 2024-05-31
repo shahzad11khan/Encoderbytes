@@ -15,7 +15,7 @@ const Ai = () => {
         className="max-w-full h-auto flex justify-center items-center mt-12"
         style={{
           backgroundImage:
-            "linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.0)), url('/backgrounds/banner-Facebook-Cover-copy.png')",
+            "linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.0)), url(&rsquo;/backgrounds/banner-Facebook-Cover-copy.png&rsquo;)",
           backgroundSize: "100% 100vh", // Set background size to full width and full height of the viewport
           backgroundBlendMode: "overlay",
           backgroundRepeat: "no-repeat",
@@ -203,8 +203,8 @@ const Ai = () => {
               <p className="mt-6 text-xl text-gray-400">
                 To save your time and manage your software smoothly, we offer a
                 complete range of white label softwares including cloud hosting
-                and management for your SAAS platform. So you don't need to
-                invest in expensive server hardware or hosting skills.
+                and management for your SAAS platform. So you don&rsquo;t need
+                to invest in expensive server hardware or hosting skills.
               </p>
             </div>
           </div>
@@ -236,7 +236,7 @@ const Ai = () => {
         className="flex flex-col md:flex-row md:h-96 bg-gradient-to-b from-black via-black to-transparent bg-no-repeat bg-cover w-full "
         style={{
           backgroundImage:
-            "linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0,0.5)),url('/backgrounds/Rectangle2.png')",
+            "linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0,0.5)),url(&rsquo;/backgrounds/Rectangle2.png&rsquo;)",
           backgroundBlendMode: "overlay",
           backgroundSize: "cover", // Ensure the background image covers the container
           backgroundPosition: "center", // Center the background image
@@ -261,7 +261,7 @@ const Ai = () => {
           <Link href="#form">
             <div className="">
               <button className="hover:text-custom-blue hover:bg-transparent px-5 my-2 py-4  font-bold rounded-md border-2 bg-custom-blue text-white border-custom-blue">
-                LET'S &nbsp; DISCUSS
+                LET&rsquo;S &nbsp; DISCUSS
               </button>
             </div>
           </Link>

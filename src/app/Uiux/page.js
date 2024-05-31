@@ -17,7 +17,7 @@ const Ai = () => {
         className="max-w-full h-auto flex justify-center items-center mt-12"
         style={{
           backgroundImage:
-            "linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.0)), url('/backgrounds/banner-Facebook-Cover-copy.png')",
+            "linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.0)), url(&rsquo;/backgrounds/banner-Facebook-Cover-copy.png&rsquo;)",
           backgroundSize: "100% 100vh", // Set background size to full width and full height of the viewport
           backgroundBlendMode: "overlay",
           backgroundRepeat: "no-repeat",

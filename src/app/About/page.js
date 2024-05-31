@@ -14,7 +14,7 @@ const page = () => {
         className="max-w-full h-auto flex justify-center items-center mt-12"
         style={{
           backgroundImage:
-            "linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.0)), url('/backgrounds/banner-Facebook-Cover-copy.png')",
+            "linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.0)), url(&rsquo;/backgrounds/banner-Facebook-Cover-copy.png&rsquo;)",
           backgroundSize: "100% 100vh", // Set background size to full width and full height of the viewport
           backgroundBlendMode: "overlay",
           backgroundRepeat: "no-repeat",
@@ -118,8 +118,8 @@ const page = () => {
                     <p className="text-wrap card-text box-content mt-3 text-md text-custom-blue">
                       Our team consists of Super programmers. World Class
                       business analysts. Creative designers and problem solvers.
-                      There's hardly a software app development challenge that
-                      our team cannot tackle.
+                      There&rsquo;s hardly a software app development challenge
+                      that our team cannot tackle.
                     </p>
                   </div>
                 </div>
@@ -192,7 +192,7 @@ const page = () => {
         className="flex flex-col md:flex-row md:h-96 bg-gradient-to-b from-black via-black to-transparent bg-no-repeat bg-cover w-full "
         style={{
           backgroundImage:
-            "linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0,0.5)),url('/backgrounds/Rectangle2.png')",
+            "linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0,0.5)),url(&rsquo;/backgrounds/Rectangle2.png&rsquo;)",
           backgroundBlendMode: "overlay",
           backgroundSize: "cover", // Ensure the background image covers the container
           backgroundPosition: "center", // Center the background image
@@ -217,7 +217,7 @@ const page = () => {
           <Link href="#form">
             <div className="">
               <button className="hover:text-custom-blue hover:bg-transparent px-5 my-2 py-4  font-bold rounded-md border-2 bg-custom-blue text-white border-custom-blue">
-                LET'S &nbsp; DISCUSS
+                LET&rsquo;S &nbsp; DISCUSS
               </button>
             </div>
           </Link>
@@ -229,7 +229,8 @@ const page = () => {
         <div
           className="m-4 md:mx-20 flex flex-col justify-center items-center h-full rounded-md md:h-auto md:p-20"
           style={{
-            backgroundImage: "url('/backgrounds/developing-cost.png')",
+            backgroundImage:
+              "url(&rsquo;/backgrounds/developing-cost.png&rsquo;)",
             backgroundSize: "cover", // Ensure the background image covers the container
             backgroundPosition: "center", // Center the background image
           }}
@@ -262,8 +263,9 @@ const page = () => {
           </div>
           <p className="mx-64 mt-5 text-center w-4/6 text-md">
             Our team consists of Super programmers. World Class business
-            analysts. Creative designers and problem solvers. There's hardly a
-            software app development challenge that our team cannot tackle.
+            analysts. Creative designers and problem solvers. There&rsquo;s
+            hardly a software app development challenge that our team cannot
+            tackle.
           </p>
         </div>
       </div>

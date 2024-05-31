@@ -64,7 +64,7 @@ const Services = () => {
             applications.
           </p>
           <button className=" text-white text-md p-5 font-bold  mt-4 rounded-md bg-custom-blue mb-6 hover:bg-white hover:border-2 hover:border-custom-blue hover:text-custom-blue">
-            LET`S DISCUSS
+            LET&rsquo;S DISCUSS
           </button>
         </div>
         {/* iamge */}
