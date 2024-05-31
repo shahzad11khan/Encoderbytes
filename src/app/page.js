@@ -14,7 +14,7 @@ export default function Home() {
         className="flex h-[760px] flex-col bg-cover relative"
         style={{
           backgroundImage:
-            "linear-gradient(rgba(0, 0, 1, 1), rgba(0, 0, 1,1)), url(&rsquo;/backgrounds/background-image.png&rsquo;)",
+            "linear-gradient(rgba(0, 0, 1, 1), rgba(0, 0, 1,1)), url('/backgrounds/background-image.png')",
           backgroundBlendMode: "overlay",
         }}
       >
@@ -203,7 +203,7 @@ export default function Home() {
       <div
         className="flex justify-center items-center"
         style={{
-          backgroundImage: "url(&rsquo;/backgrounds/Group32.png&rsquo;)",
+          backgroundImage: "url('/backgrounds/Group32.png')",
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover",
         }}
@@ -390,7 +390,7 @@ export default function Home() {
         className="flex flex-col md:flex-row md:h-80 bg-gradient-to-b from-black via-black to-transparent bg-no-repeat bg-cover w-full"
         style={{
           backgroundImage:
-            "linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0,0.5)),url(&rsquo;/backgrounds/Rectangle2.png&rsquo;)",
+            "linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0,0.5)),url('/backgrounds/Rectangle2.png')",
           backgroundBlendMode: "overlay",
           backgroundSize: "cover", // Ensure the background image covers the container
           backgroundPosition: "center", // Center the background image
