@@ -59,10 +59,12 @@ const WebAPP = () => {
         </div>
         {/* iamge */}
         <div className="bg-yellow w-full md:w-[50%] h-auto md:h-full relative">
-          <img
+          <Image
             src="/backgrounds/Rectangle29.png"
             alt="Logo"
             className="object-cover w-full h-full"
+            width={400}
+            height={400}
           />
         </div>
       </div>
@@ -149,7 +151,7 @@ const WebAPP = () => {
             {Webapps.map((items) => {
               return (
                 <div className=" bg-gray-200 rounded-md border-black p-4 gap-5 text-center flex flex-col justify-center items-center">
-                  <img src={items.image} />
+                  <Image src={items.image} width={100} height={100} />
                   <span>{items.name}</span>
                 </div>
               );
@@ -217,7 +219,7 @@ const WebAPP = () => {
             {WebSecapps.map((items) => {
               return (
                 <div className=" bg-gray-200 rounded-xl border-black p-9 text-center flex flex-col justify-between items-center gap-5">
-                  <img src={items.image} />
+                  <Image src={items.image} width={200} height={200} />
                   <span>{items.name}</span>
                 </div>
               );
@@ -249,7 +251,12 @@ const WebAPP = () => {
             {Webeappslogo.map((items) => {
               return (
                 <div className="border-2 border-gray-400 p-14 text-center flex flex-col gap-12 justify-between items-center rounded-xl ">
-                  <img src={items.image} className="rounded-lg" />
+                  <Image
+                    src={items.image}
+                    className="rounded-lg"
+                    width={200}
+                    height={200}
+                  />
                   <span className="font-bold">{items.name}</span>
                 </div>
               );
@@ -268,10 +275,12 @@ const WebAPP = () => {
         </div>{" "}
         <div className="flex flex-col md:flex-row justify-center items-center px-6 md:px-32 mt-20 md:mt-20 gap-y-8 md:gap-x-8 bg-blue-300 md:w-5/6 m-auto p-8 rounded-xl">
           <div className="bg-yellow w-full md:w-[50%] h-auto md:h-full relative">
-            <img
+            <Image
               src="/backgrounds/app2.png"
               alt="Logo"
               className="object-cover w-full h-full"
+              width={400}
+              height={400}
             />
           </div>
           <div className="flex flex-col justify-center items-center md:items-start gap-y-5 text-center md:text-left md:w-[50%]">
@@ -317,19 +326,23 @@ const WebAPP = () => {
 
           {/* iamge */}
           <div className="bg-yellow w-full md:w-[50%] h-auto md:h-full relative">
-            <img
+            <Image
               src="/backgrounds/app3.png"
               alt="Logo"
               className="object-cover w-full h-full"
+              width={400}
+              height={400}
             />
           </div>
         </div>
         <div className="flex flex-col md:flex-row justify-center items-center px-6 md:px-32 mt-20 md:mt-20 gap-y-8 md:gap-x-8 bg-blue-300 md:w-5/6 m-auto p-5 rounded-md">
           <div className="bg-yellow w-full md:w-[50%] h-auto md:h-full relative">
-            <img
+            <Image
               src="/backgrounds/app1.png"
               alt="Logo"
               className="object-cover w-full h-full"
+              width={400}
+              height={400}
             />
           </div>
           <div className="flex flex-col justify-center items-center md:items-start gap-y-5 text-center md:text-left md:w-[50%]">

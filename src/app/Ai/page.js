@@ -64,10 +64,12 @@ const Ai = () => {
         </div>
         {/* iamge */}
         <div className="bg-yellow w-full md:w-[50%] h-auto md:h-full relative">
-          <img
+          <Image
             src="/backgrounds/Rectangle29.png"
             alt="Logo"
             className="object-cover w-full h-full"
+            width={400}
+            height={400}
           />
         </div>
       </div>
@@ -285,7 +287,12 @@ const Ai = () => {
             {Aiappslogo.map((items) => {
               return (
                 <div className="border-2 border-gray-400 p-8 text-center flex flex-col gap-20  justify-between items-center rounded-lg ">
-                  <img src={items.image} className="rounded-lg" />
+                  <Image
+                    src={items.image}
+                    className="rounded-lg"
+                    width={300}
+                    height={300}
+                  />
                   <span className="font-bold text-xl">{items.name}</span>
                 </div>
               );
@@ -309,10 +316,12 @@ const Ai = () => {
           style={{ backgroundColor: "rgb(164,189,247)" }}
         >
           <div className="bg-yellow w-full md:w-[50%] h-auto md:h-full relative">
-            <img
+            <Image
               src="/backgrounds/app2.png"
               alt="Logo"
               className="object-cover w-full h-full"
+              width={400}
+              height={400}
             />
           </div>
           <div className="flex flex-col justify-center items-center md:items-start gap-y-5 text-center md:text-left md:w-[50%]">
@@ -358,19 +367,23 @@ const Ai = () => {
 
           {/* iamge */}
           <div className="bg-yellow w-full md:w-[50%] h-auto md:h-full relative">
-            <img
+            <Image
               src="/backgrounds/app3.png"
               alt="Logo"
               className="object-cover w-full h-full"
+              width={400}
+              height={400}
             />
           </div>
         </div>
         <div className="flex flex-col md:flex-row justify-center items-center px-6 md:px-32 mt-20 md:mt-20 gap-y-8 md:gap-x-8 bg-blue-300 md:w-5/6 m-auto p-14 rounded-xl">
           <div className="bg-yellow w-full md:w-[50%] h-auto md:h-full relative">
-            <img
+            <Image
               src="/backgrounds/app1.png"
               alt="Logo"
               className="object-cover w-full h-full"
+              width={400}
+              height={400}
             />
           </div>
           <div className="flex flex-col justify-center items-center md:items-start gap-y-5 text-center md:text-left md:w-[50%]">

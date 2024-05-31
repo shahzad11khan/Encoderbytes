@@ -286,10 +286,12 @@ export default function Home() {
       {/* done responsive */}
       <div className="flex flex-col md:flex-row justify-center items-center px-6 md:px-32 mt-20 md:mt-20 gap-y-8 md:gap-x-8">
         <div className="bg-yellow w-full md:w-[70%] h-auto md:h-full relative">
-          <img
+          <Image
             src="/backgrounds/induz-a-industrial-category-wordpress-theme.png"
             alt="Logo"
             className="object-cover w-full h-full"
+            width={400}
+            height={400}
           />
         </div>
         <div className="flex flex-col justify-center items-center md:items-start gap-y-5 text-center md:text-left md:w-[50%]">
@@ -453,10 +455,12 @@ export default function Home() {
               </div>
             </div>
             <div className="bg-yellow w-full md:w-[50%]">
-              <img
+              <Image
                 src="/backgrounds/Mask-group1.png"
                 alt="Logo"
                 className="w-full h-full object-cover"
+                width={400}
+                height={400}
               />
             </div>
           </div>
@@ -465,10 +469,12 @@ export default function Home() {
       {/* 9 section */}
       <div className="flex flex-col md:flex-row justify-center items-center px-6 md:px-32 mt-20 md:mt-20 gap-y-8 md:gap-x-8">
         <div className="bg-yellow w-full md:w-[50%] h-auto md:h-full relative">
-          <img
+          <Image
             src="/backgrounds/Mask-group2.png"
             alt="Logo"
             className="object-cover w-full h-full"
+            width={400}
+            height={400}
           />
         </div>
         <div className="flex flex-col justify-center items-center md:items-start gap-y-5 text-center md:text-left md:w-[50%]">
@@ -511,10 +517,12 @@ export default function Home() {
 
         {/* iamge */}
         <div className="bg-yellow w-full md:w-[50%] h-auto md:h-full relative">
-          <img
+          <Image
             src="/backgrounds/Mask-group3.png"
             alt="Logo"
             className="object-cover w-full h-full"
+            width={400}
+            height={400}
           />
         </div>
       </div>
