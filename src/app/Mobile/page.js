@@ -150,7 +150,7 @@ const MobileApp = () => {
                   key={items.name}
                   className=" bg-gray-200 rounded-md border-black p-10 text-center flex flex-col justify-between items-center gap-4"
                 >
-                  <Image src={items.image} width={50} height={50} />
+                  <Image src={items.image} width={50} height={50} alt="image" />
                   <span>{items.name}</span>
                 </div>
               );
@@ -268,6 +268,7 @@ const MobileApp = () => {
                   <Image
                     src={items.image}
                     className="rounded-lg"
+                    alt="image"
                     width={48}
                     height={48}
                   />

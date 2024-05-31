@@ -91,8 +91,17 @@ const Services = () => {
           <div className=" grid grid-cols-2 md:grid-cols-4 gap-8 mt-20 pb-20 w-5/6">
             {Serviceslogo.map((items) => {
               return (
-                <div className="border-2 border-gray-400 px-2 py-16 text-center flex flex-col gap-24 justify-between items-center rounded-lg bg-custom-blue text-xl">
-                  <img src={items.image} className="rounded-lg" />
+                <div
+                  key={items.name}
+                  className="border-2 border-gray-400 px-2 py-16 text-center flex flex-col gap-24 justify-between items-center rounded-lg bg-custom-blue text-xl"
+                >
+                  <Image
+                    src={items.image}
+                    className="rounded-lg"
+                    width={200}
+                    height={200}
+                    alt="image"
+                  />
                   <div className="font-bold text-white text-2xl">
                     <span className="">{items.name}</span>
                     <div className="mt-4 text-center flex justify-center">
@@ -229,7 +238,13 @@ const Services = () => {
             {CostOfSoftware.map((items) => {
               return (
                 <div className="border-2 border-gray-400 px-2  py-3 text-center flex flex-col gap-5 outline-none border-none justify-between items-center rounded-lg bg-white text-xl">
-                  <img src={items.image} className="rounded-lg mt-10" />
+                  <Image
+                    alt="image"
+                    width={200}
+                    height={200}
+                    src={items.image}
+                    className="rounded-lg mt-10"
+                  />
                   <div className=" text-black text-base">
                     <span className="font-bold">{items.name} </span>
                     <span className="font-bold text-custom-blue">

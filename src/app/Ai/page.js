@@ -293,6 +293,7 @@ const Ai = () => {
                   <Image
                     src={items.image}
                     className="rounded-lg"
+                    alt="image"
                     width={300}
                     height={300}
                   />

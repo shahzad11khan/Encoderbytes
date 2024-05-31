@@ -296,10 +296,14 @@ const Ai = () => {
           <div className=" grid grid-cols-2 md:grid-cols-6 gap-8 mt-20 pb-20 w-5/6">
             {Uiuxappslogo.map((items) => {
               return (
-                <div className="border-2 border-gray-400 p-14 text-center flex flex-col gap-9 justify-between items-center rounded-xl ">
+                <div
+                  key={items.name}
+                  className="border-2 border-gray-400 p-14 text-center flex flex-col gap-9 justify-between items-center rounded-xl "
+                >
                   <Image
                     src={items.image}
                     className="rounded-lg"
+                    alt="image"
                     width={200}
                     height={200}
                   />

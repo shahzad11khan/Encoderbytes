@@ -154,7 +154,12 @@ const WebAPP = () => {
                   key={items.name}
                   className=" bg-gray-200 rounded-md border-black p-4 gap-5 text-center flex flex-col justify-center items-center"
                 >
-                  <Image src={items.image} width={100} height={100} />
+                  <Image
+                    src={items.image}
+                    width={100}
+                    height={100}
+                    alt="iamge"
+                  />
                   <span>{items.name}</span>
                 </div>
               );
@@ -226,7 +231,12 @@ const WebAPP = () => {
                   key={items.name}
                   className=" bg-gray-200 rounded-xl border-black p-9 text-center flex flex-col justify-between items-center gap-5"
                 >
-                  <Image src={items.image} width={200} height={200} />
+                  <Image
+                    src={items.image}
+                    width={200}
+                    height={200}
+                    alt="image"
+                  />
                   <span>{items.name}</span>
                 </div>
               );
@@ -264,6 +274,7 @@ const WebAPP = () => {
                   <Image
                     src={items.image}
                     className="rounded-lg"
+                    alt="iamge"
                     width={200}
                     height={200}
                   />

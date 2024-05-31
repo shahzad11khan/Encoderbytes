@@ -36,6 +36,10 @@
 //     return () => clearInterval(intervalId);
 //   }, [currentSlideIndex]);
 
+//   const handleDotClick = (index) => {
+//     setCurrentSlideIndex(index);
+//   };
+
 //   return (
 //     <div
 //       id="default-carousel"
@@ -82,12 +86,22 @@
 //           </div>
 //         ))}
 //       </div>
+//       <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 flex space-x-3">
+//         {slides.map((_, index) => (
+//           <button
+//             key={index}
+//             className={`w-4 h-4 rounded-full ${
+//               index === currentSlideIndex ? "bg-blue-500" : "bg-gray-300"
+//             }`}
+//             onClick={() => handleDotClick(index)}
+//           ></button>
+//         ))}
+//       </div>
 //     </div>
 //   );
 // };
 
 // export default Carousal;
-
 "use client";
 import { useState, useEffect } from "react";
 import Image from "next/image";
@@ -124,7 +138,7 @@ const Carousal = () => {
   useEffect(() => {
     const intervalId = setInterval(autoChangeSlide, 3000);
     return () => clearInterval(intervalId);
-  }, [currentSlideIndex]);
+  }, [currentSlideIndex, autoChangeSlide]);
 
   const handleDotClick = (index) => {
     setCurrentSlideIndex(index);
