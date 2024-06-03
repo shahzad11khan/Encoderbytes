@@ -83,13 +83,15 @@ export default function Home() {
               <Image src="/icons/mob.png" alt="Logo" width={80} height={80} />
             </div>
             <div className="flex flex-col ml-2 mt-4 md:mt-10">
-              <div className="text-center md:text-left">
-                <Image
+              <div className="text-center md:text-left flex flex-col text-2xl font-black">
+                {/* <Image
                   src="/Text-headings/mobapp.png"
                   alt="Logo"
                   width={190}
                   height={190}
-                />
+                /> */}
+                <div className="text-gray-500">MOBLIE APP</div>
+                <div className="text-custom-blue">DEVELOPMENT</div>
               </div>
               <p className="text-md mt-5 font-normal text-gray-400 leading-6">
                 We are building stunning Mobile Apps that work across a variety
@@ -113,19 +115,15 @@ export default function Home() {
               />
             </div>
             <div className="flex flex-col ml-2 mt-4 md:mt-10">
-              <div className="text-center md:text-left">
-                <Image
-                  src="/Text-headings/webapp.png"
+              <div className="text-center md:text-left flex flex-col text-2xl font-black">
+                {/* <Image
+                  src="/Text-headings/mobapp.png"
                   alt="Logo"
-                  width={210}
-                  height={210}
-                />
-                {/* <p className="text-lg md:text-3xl font-bold w-full">
-                  WEB APPLICATION
-                </p>
-                <span className="text-lg md:text-3xl text-custom-blue font-bold">
-                  DEVELOPMENT
-                </span> */}
+                  width={190}
+                  height={190}
+                /> */}
+                <div className="text-gray-500">WEB APPLICATION</div>
+                <div className="text-custom-blue">DEVELOPMENT</div>
               </div>
               <p className="text-md mt-5 pb-28 font-normal text-gray-400 leading-6">
                 By Utilizing the latest technologies, we build web applications
@@ -148,13 +146,15 @@ export default function Home() {
               />
             </div>
             <div className="flex flex-col ml-2 mt-4 md:mt-10">
-              <div className="text-center md:text-left">
-                <Image
-                  src="/Text-headings/AI.png"
+              <div className="text-center md:text-left flex flex-col text-2xl font-black">
+                {/* <Image
+                  src="/Text-headings/mobapp.png"
                   alt="Logo"
                   width={190}
                   height={190}
-                />
+                /> */}
+                <div className="text-gray-500">ARTIFICIAL</div>
+                <div className="text-custom-blue">INTELLIGENCE</div>
               </div>
               <p className="text-md mt-5 pb-5 font-normal text-gray-400 leading-6">
                 We have a rich background in Artificial intelligence software
@@ -179,11 +179,15 @@ export default function Home() {
               />
             </div>
             <div className="flex flex-col ml-2 mt-4 md:mt-10">
-              <div className="text-center md:text-left">
-                <p className="text-lg md:text-3xl font-bold w-full">UI/UX</p>
-                <span className="text-lg md:text-3xl text-custom-blue font-bold">
-                  DESIGN
-                </span>
+              <div className="text-center md:text-left flex flex-col text-2xl font-black">
+                {/* <Image
+                  src="/Text-headings/mobapp.png"
+                  alt="Logo"
+                  width={190}
+                  height={190}
+                /> */}
+                <div className="text-gray-500">UI / UX</div>
+                <div className="text-custom-blue">DESIGN</div>
               </div>
               <p className="text-md mt-5 font-normal text-gray-400 leading-6">
                 Our UI/UX designs are focused on efficient solutions to user
