@@ -15,7 +15,7 @@ const MobileApp = () => {
         className="max-w-full h-auto flex justify-center items-center mt-12"
         style={{
           backgroundImage:
-            "linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.0)), url(&rsquo;/backgrounds/banner-Facebook-Cover-copy.png&rsquo;)",
+            "linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.0)), url('/backgrounds/banner-Facebook-Cover-copy.png')",
           backgroundSize: "100% 100vh", // Set background size to full width and full height of the viewport
           backgroundBlendMode: "overlay",
           backgroundRepeat: "no-repeat",
@@ -215,8 +215,7 @@ const MobileApp = () => {
           <div
             className="m-4 md:mx-20 flex flex-col justify-center items-center h-full rounded-md md:h-auto md:p-20"
             style={{
-              backgroundImage:
-                "url(&rsquo;/backgrounds/developing-cost.png&rsquo;)",
+              backgroundImage: "url('/backgrounds/developing-cost.png')",
               backgroundSize: "cover", // Ensure the background image covers the container
               backgroundPosition: "center", // Center the background image
             }}
