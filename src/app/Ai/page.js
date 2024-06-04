@@ -15,7 +15,7 @@ const Ai = () => {
         className="max-w-full h-auto flex justify-center items-center mt-12"
         style={{
           backgroundImage:
-            "linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.0)), url(&rsquo;/backgrounds/banner-Facebook-Cover-copy.png&rsquo;)",
+            "linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.0)), url('/backgrounds/banner-Facebook-Cover-copy.png')",
           backgroundSize: "100% 100vh", // Set background size to full width and full height of the viewport
           backgroundBlendMode: "overlay",
           backgroundRepeat: "no-repeat",
@@ -236,7 +236,7 @@ const Ai = () => {
         className="flex flex-col md:flex-row md:h-96 bg-gradient-to-b from-black via-black to-transparent bg-no-repeat bg-cover w-full "
         style={{
           backgroundImage:
-            "linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0,0.5)),url(&rsquo;/backgrounds/Rectangle2.png&rsquo;)",
+            "linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0,0.5)),url('/backgrounds/Rectangle2.png')",
           backgroundBlendMode: "overlay",
           backgroundSize: "cover", // Ensure the background image covers the container
           backgroundPosition: "center", // Center the background image
