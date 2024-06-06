@@ -1,8 +1,8 @@
 // Header.js
 "use client";
 import { useState, useEffect } from "react";
+// import Image from "next/image";
 import Link from "next/link";
-import Image from "next/image";
 
 const Header = () => {
   const [isSticky, setIsSticky] = useState(false);
@@ -42,41 +42,35 @@ const Header = () => {
         <div className="flex justify-between items-center w-5/6 m-auto py-2">
           {/* Left Side: Logo */}
           <div className="flex justify-center items-center">
-            <Image
-              src="/logos/logo.png"
-              alt="Logo"
-              className="w-25 h-auto"
-              width={200}
-              height={200}
-            />
+            <img src="/logos/logo.png" alt="Logo" className="w-25 h-auto" />
           </div>
 
           {/* Center: Navigation Links */}
-          <div className="hidden md:flex flex-grow justify-center text-xl gap-3">
+          <div className="hidden md:flex flex-grow justify-center text-md gap-3">
             <Link
               href="/"
               className="text-white mr-4 hover:text-gray-300 hover:border-b hover:border-custom-blue"
             >
-              Home
+              HOME
             </Link>
             <Link
               href="/About"
               className="text-white mr-4 hover:text-gray-300 hover:border-b hover:border-custom-blue"
             >
-              About
+              ABOUT
             </Link>
             <Link
               href="/Projects"
               className="text-white mr-4 hover:text-gray-300 hover:border-b hover:border-custom-blue"
             >
-              Projects
+              PROJECTS
             </Link>
             <div className="relative">
               <button
                 onClick={toggleProjectsDropdown}
                 className="text-white mr-4 relative"
               >
-                Services
+                SERVICES
                 <span className="ml-1">&#9662;</span>
               </button>
 
@@ -173,7 +167,7 @@ const Header = () => {
                                 href="/WebApp/#section4"
                                 className="hover:text-custom-blue hover:border-b-2 hover:border-custom-blue"
                               >
-                                WHAT&apos;S IMPORTANT
+                                WHAT'S IMPORTANT
                               </Link>
                             </li>
                             <li>
@@ -272,19 +266,19 @@ const Header = () => {
               href="#"
               className="text-white mr-4 hover:text-gray-300 hover:border-b hover:border-custom-blue"
             >
-              Blog
+              BLOG
             </Link>
             <Link
               href="/How_we_Work"
               className="text-white mr-4 hover:text-gray-300 hover:border-b hover:border-custom-blue"
             >
-              How We Work
+              HOW WE WORK
             </Link>
             <Link
               href="/Career"
               className="text-white mr-4 hover:text-gray-300 hover:border-b hover:border-custom-blue"
             >
-              Career
+              CAREER
             </Link>
           </div>
 
@@ -330,26 +324,26 @@ const Header = () => {
             href="/"
             className="block text-white py-2 px-4 hover:bg-gray-700 hover:border-b hover:border-custom-blue"
           >
-            Home
+            HOME
           </Link>
           <Link
             href="/About"
             className="block text-white py-2 px-4 hover:bg-gray-700 hover:border-b hover:border-custom-blue"
           >
-            About
+            ABOUT
           </Link>
           <Link
             href="/Projects"
             className="block text-white py-2 px-4 hover:bg-gray-700 hover:border-b hover:border-custom-blue"
           >
-            Projects
+            PROJECTS
           </Link>
           <div className="relative">
             <button
               onClick={toggleProjectsDropdown}
               className="text-white mr-4 relative"
             >
-              Services
+              SERVICES
               <span className="ml-1">&#9662;</span>
             </button>
 
@@ -434,7 +428,7 @@ const Header = () => {
                               href="/WebApp/#section4"
                               className="hover:text-custom-blue hover:border-b-2 hover:border-custom-blue"
                             >
-                              WHAT&apos;S IMPORTANT
+                              WHAT'S IMPORTANT
                             </Link>
                           </li>
                           <li>
@@ -523,19 +517,19 @@ const Header = () => {
             href="#"
             className="block text-white py-2 px-4 hover:bg-gray-700 hover:border-b hover:border-custom-blue"
           >
-            Blog
+            BLOG
           </Link>
           <Link
             href="/How_we_Work"
             className="block text-white py-2 px-4 hover:bg-gray-700 hover:border-b hover:border-custom-blue"
           >
-            How We Work
+            HOW WE WORK
           </Link>
           <Link
             href="/Career"
             className="block text-white py-2 px-4 hover:bg-gray-700 hover:border-b hover:border-custom-blue"
           >
-            Career
+            CAREER
           </Link>
           <Link href="#form">
             <button className="bg-blue-500 hover:bg-custom-blue text-white font-semibold py-2 px-4 rounded-md shadow-md w-full text-left">

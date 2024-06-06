@@ -33,7 +33,7 @@ export default function Home() {
             Software Development That Ensures Growth Of Your{" "}
             <br className="hidden md:inline" /> Business.
           </p>
-          <div className=" text-white text-md rounded-md hover:bg-transparent py-4 px-3 mt-16 bg-custom-blue hover:border-white hover:border-2 w-[200px] flex items-center gap-3">
+          <div className=" text-white text-md rounded-md hover:bg-transparent py-3 px-2 mt-16 bg-custom-blue hover:border-white hover:border-2 w-[150px] flex items-center gap-2">
             <button className="">Let`s Discuss</button>
             <FaArrowCircleRight />
           </div>
@@ -83,15 +83,13 @@ export default function Home() {
               <Image src="/icons/mob.png" alt="Logo" width={80} height={80} />
             </div>
             <div className="flex flex-col ml-2 mt-4 md:mt-10">
-              <div className="text-center md:text-left flex flex-col text-2xl font-black">
-                {/* <Image
+              <div className="text-center md:text-left">
+                <Image
                   src="/Text-headings/mobapp.png"
                   alt="Logo"
                   width={190}
                   height={190}
-                /> */}
-                <div className="text-gray-500">MOBLIE APP</div>
-                <div className="text-custom-blue">DEVELOPMENT</div>
+                />
               </div>
               <p className="text-md mt-5 font-normal text-gray-400 leading-6">
                 We are building stunning Mobile Apps that work across a variety
@@ -115,15 +113,19 @@ export default function Home() {
               />
             </div>
             <div className="flex flex-col ml-2 mt-4 md:mt-10">
-              <div className="text-center md:text-left flex flex-col text-2xl font-black">
-                {/* <Image
-                  src="/Text-headings/mobapp.png"
+              <div className="text-center md:text-left">
+                <Image
+                  src="/Text-headings/webapp.png"
                   alt="Logo"
-                  width={190}
-                  height={190}
-                /> */}
-                <div className="text-gray-500">WEB APPLICATION</div>
-                <div className="text-custom-blue">DEVELOPMENT</div>
+                  width={210}
+                  height={210}
+                />
+                {/* <p className="text-lg md:text-3xl font-bold w-full">
+                  WEB APPLICATION
+                </p>
+                <span className="text-lg md:text-3xl text-custom-blue font-bold">
+                  DEVELOPMENT
+                </span> */}
               </div>
               <p className="text-md mt-5 pb-28 font-normal text-gray-400 leading-6">
                 By Utilizing the latest technologies, we build web applications
@@ -146,15 +148,13 @@ export default function Home() {
               />
             </div>
             <div className="flex flex-col ml-2 mt-4 md:mt-10">
-              <div className="text-center md:text-left flex flex-col text-2xl font-black">
-                {/* <Image
-                  src="/Text-headings/mobapp.png"
+              <div className="text-center md:text-left">
+                <Image
+                  src="/Text-headings/AI.png"
                   alt="Logo"
                   width={190}
                   height={190}
-                /> */}
-                <div className="text-gray-500">ARTIFICIAL</div>
-                <div className="text-custom-blue">INTELLIGENCE</div>
+                />
               </div>
               <p className="text-md mt-5 pb-5 font-normal text-gray-400 leading-6">
                 We have a rich background in Artificial intelligence software
@@ -179,15 +179,11 @@ export default function Home() {
               />
             </div>
             <div className="flex flex-col ml-2 mt-4 md:mt-10">
-              <div className="text-center md:text-left flex flex-col text-2xl font-black">
-                {/* <Image
-                  src="/Text-headings/mobapp.png"
-                  alt="Logo"
-                  width={190}
-                  height={190}
-                /> */}
-                <div className="text-gray-500">UI / UX</div>
-                <div className="text-custom-blue">DESIGN</div>
+              <div className="text-center md:text-left">
+                <p className="text-lg md:text-3xl font-bold w-full">UI/UX</p>
+                <span className="text-lg md:text-3xl text-custom-blue font-bold">
+                  DESIGN
+                </span>
               </div>
               <p className="text-md mt-5 font-normal text-gray-400 leading-6">
                 Our UI/UX designs are focused on efficient solutions to user
@@ -290,12 +286,10 @@ export default function Home() {
       {/* done responsive */}
       <div className="flex flex-col md:flex-row justify-center items-center px-6 md:px-32 mt-20 md:mt-20 gap-y-8 md:gap-x-8">
         <div className="bg-yellow w-full md:w-[70%] h-auto md:h-full relative">
-          <Image
+          <img
             src="/backgrounds/induz-a-industrial-category-wordpress-theme.png"
             alt="Logo"
             className="object-cover w-full h-full"
-            width={400}
-            height={400}
           />
         </div>
         <div className="flex flex-col justify-center items-center md:items-start gap-y-5 text-center md:text-left md:w-[50%]">
@@ -305,7 +299,7 @@ export default function Home() {
           </div>
           <div className="flex flex-col items-center md:items-start">
             <div className="text-2xl md:text-3xl font-semibold text-center md:text-left">
-              AN INDUSTRY&rsquo;S EMPLOYEES
+              AN INDUSTRY'S EMPLOYEES
             </div>
             <div className="flex items-center gap-2 text-center md:text-left">
               <div className="text-2xl md:text-3xl font-bold text-custom-blue">
@@ -418,7 +412,7 @@ export default function Home() {
           </div>
           <div className="">
             <button className="hover:text-custom-blue hover:bg-transparent px-3 my-2 py-2 font-bold rounded-md border-2 bg-custom-blue text-white border-custom-blue">
-              LET&rsquo;S DISCUSS
+              LET'S DISCUSS
             </button>
           </div>
         </div>
@@ -453,18 +447,16 @@ export default function Home() {
                 category in Pakistan.We provide management systems to health
                 industry.
               </p>
-              <div className="  text-md rounded-md text-custom-blue py-4 px-3 mt-8  border-custom-blue hover:bg-custom-blue hover:text-white  border-2 w-[200px] flex items-center gap-3">
+              <div className="text-md rounded-md text-custom-blue py-4 px-3 mt-8  border-custom-blue hover:bg-custom-blue hover:text-white  border-2 w-[150px] flex items-center gap-3">
                 <button className="">READ MORE</button>
                 <FaArrowCircleRight />
               </div>
             </div>
             <div className="bg-yellow w-full md:w-[50%]">
-              <Image
+              <img
                 src="/backgrounds/Mask-group1.png"
                 alt="Logo"
                 className="w-full h-full object-cover"
-                width={400}
-                height={400}
               />
             </div>
           </div>
@@ -473,12 +465,10 @@ export default function Home() {
       {/* 9 section */}
       <div className="flex flex-col md:flex-row justify-center items-center px-6 md:px-32 mt-20 md:mt-20 gap-y-8 md:gap-x-8">
         <div className="bg-yellow w-full md:w-[50%] h-auto md:h-full relative">
-          <Image
+          <img
             src="/backgrounds/Mask-group2.png"
             alt="Logo"
             className="object-cover w-full h-full"
-            width={400}
-            height={400}
           />
         </div>
         <div className="flex flex-col justify-center items-center md:items-start gap-y-5 text-center md:text-left md:w-[50%]">
@@ -493,7 +483,7 @@ export default function Home() {
             through online and physical classes. Also, we develop software for
             different educational institutes.
           </p>
-          <div className="  text-md rounded-md text-custom-blue py-4 px-3 mt-8  border-custom-blue hover:bg-custom-blue hover:text-white  border-2 w-[200px] flex items-center gap-3">
+          <div className="  text-md rounded-md text-custom-blue py-4 px-3 mt-8  border-custom-blue hover:bg-custom-blue hover:text-white  border-2 w-[150px] flex items-center gap-3">
             <FaArrowAltCircleLeft />
             <button className="">READ MORE</button>
           </div>
@@ -513,7 +503,7 @@ export default function Home() {
             solutions for businesses to get more income. We have developed
             several E-commerce web and mobile applications for them.
           </p>
-          <div className="  text-md rounded-md text-custom-blue py-4 px-3 mt-8  border-custom-blue hover:bg-custom-blue hover:text-white  border-2 w-[200px] flex items-center gap-3">
+          <div className="  text-md rounded-md text-custom-blue py-4 px-3 mt-8  border-custom-blue hover:bg-custom-blue hover:text-white  border-2 w-[150px] flex items-center gap-3">
             <button className="">READ MORE</button>
             <FaArrowCircleRight />
           </div>
@@ -521,12 +511,10 @@ export default function Home() {
 
         {/* iamge */}
         <div className="bg-yellow w-full md:w-[50%] h-auto md:h-full relative">
-          <Image
+          <img
             src="/backgrounds/Mask-group3.png"
             alt="Logo"
             className="object-cover w-full h-full"
-            width={400}
-            height={400}
           />
         </div>
       </div>

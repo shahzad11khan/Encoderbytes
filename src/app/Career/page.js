@@ -56,12 +56,10 @@ const page = () => {
         </div>
         {/* iamge */}
         <div className="mt-8 bg-yellow w-full md:w-[50%] h-auto md:h-full relative">
-          <Image
+          <img
             src="/backgrounds/Rectangle-30.png"
             alt="Logo"
             className="object-cover w-full h-full"
-            width={400}
-            height={400}
           />
         </div>
       </div>

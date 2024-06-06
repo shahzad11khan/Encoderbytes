@@ -71,12 +71,10 @@ const page = () => {
         </div>
         {/* iamge */}
         <div className="bg-yellow w-full md:w-[50%] h-auto md:h-full relative">
-          <Image
+          <img
             src="/backgrounds/unsplash1.png"
             alt="Logo"
             className="object-cover w-full h-full"
-            width={400}
-            height={400}
           />
         </div>
       </div>
@@ -118,8 +116,8 @@ const page = () => {
                     <p className="text-wrap card-text box-content mt-3 text-md text-custom-blue">
                       Our team consists of Super programmers. World Class
                       business analysts. Creative designers and problem solvers.
-                      There&rsquo;s hardly a software app development challenge
-                      that our team cannot tackle.
+                      There's hardly a software app development challenge that
+                      our team cannot tackle.
                     </p>
                   </div>
                 </div>
@@ -217,7 +215,7 @@ const page = () => {
           <Link href="#form">
             <div className="">
               <button className="hover:text-custom-blue hover:bg-transparent px-5 my-2 py-4  font-bold rounded-md border-2 bg-custom-blue text-white border-custom-blue">
-                LET&rsquo;S &nbsp; DISCUSS
+                LET'S &nbsp; DISCUSS
               </button>
             </div>
           </Link>
@@ -262,51 +260,52 @@ const page = () => {
           </div>
           <p className="mx-64 mt-5 text-center w-4/6 text-md">
             Our team consists of Super programmers. World Class business
-            analysts. Creative designers and problem solvers. There&rsquo;s
-            hardly a software app development challenge that our team cannot
-            tackle.
+            analysts. Creative designers and problem solvers. There's hardly a
+            software app development challenge that our team cannot tackle.
           </p>
         </div>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-4  mt-12  pb-20 w-5/6 m-auto">
         {Teammembers.map((team) => (
-          <div class="px-20 mt-10 md:p-4" key={team.name}>
-            <div class="cardtext1 border-2 border-gray-300 rounded-lg shadow-md p-4 text-center h-[500px] hover:border-2 hover:border-custom-blue filter grayscale hover:filter-none transition duration-300">
+          <div class="px-20 mt-4 md:py-1 md:px-3">
+            <div class="cardtext1 border-2 border-gray-300 rounded-xl shadow-md text-center h-[400px]  py-10 hover:border-2 hover:border-custom-blue ">
               <div class="row">
                 <div class="col-md-12 flex justify-center rounded-full">
                   <Image
                     src={team.image}
-                    className="img-fluid py-3 rounded-full"
+                    className="img-fluid  rounded-full  filter grayscale hover:filter-none transition duration-300"
                     alt="Logo"
-                    width={200}
-                    height={200}
+                    width={170}
+                    height={170}
                     style={{ backgroundSize: "cover" }}
                   />
                 </div>
               </div>
 
-              <h1 class="py-3 px-4 mt-10">
-                <span class="font-bold text-custom-blue text-2xl">
+              <h1 class="py-3 px-4 mt-2">
+                <span class="font-bold text-custom-blue text-xl">
                   {team.name}
                 </span>
-                <p class="text-sm card-text box-content">{team.status}</p>
+                <p class="text-xs card-text box-content text-gray-400">
+                  {team.status}
+                </p>
               </h1>
-              <div class="social-icons mt-5 pb-10">
-                <div className="flex justify-center bg-gray-400 w-4/6 m-auto items-center">
+              <div class="social-icons mt-10 pb-10 ">
+                <div className="flex justify-center bg-gray-300 w-3/6 m-auto items-center rounded-md text-gray-500 hover:bg-blue-100">
                   {team.LinkedIn && (
                     <a href={team.LinkedIn} class="px-2 py-1">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 24 24"
-                        class="w-6 h-6 fill-current text-blue-600"
+                        class="w-6 h-6 fill-current hover:text-blue-600 text-gray-500"
                       >
                         <path d="M22,0H2A2,2,0,0,0,0,2V22a2,2,0,0,0,2,2H22a2,2,0,0,0,2-2V2A2,2,0,0,0,22,0ZM7.57,20H4V9H7.57ZM5.76,7.68A2.75,2.75,0,1,1,8.28,5.2,2.76,2.76,0,0,1,5.76,7.68ZM20,20H16V14c0-1.14-.42-1.91-1.52-1.91S13,12.86,13,14v6H9V9h3v1.27A4.22,4.22,0,0,1,16,8.8c3.71,0,4.52,2.44,4.52,5.6Z"></path>
                       </svg>
                     </a>
                   )}
                   {team.Github && (
-                    <a href={team.Github} class="px-2 py-1">
+                    <a href={team.Github} class="px-2 py-1 hover:text-blue-600">
                       <FaGithubSquare size={25} />
                     </a>
                   )}

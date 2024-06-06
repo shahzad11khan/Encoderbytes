@@ -3,7 +3,6 @@ import Top from "../Utils/Top";
 import Link from "next/link";
 import { Howwework } from "../components/Howwework";
 import Contactform from "../Utils/Contactform";
-import Image from "next/image";
 const How_we_work = () => {
   return (
     <div className=" bg-white">
@@ -118,12 +117,10 @@ const How_we_work = () => {
 
         {/* iamge */}
         <div className="bg-yellow w-full md:w-[100%] h-auto md:h-full relative mt-5">
-          <Image
+          <img
             src="/backgrounds/img1.png"
             alt="Logo"
             className="object-cover w-full h-full"
-            width={400}
-            height={400}
           />
           <div className="font-bold md:text-2xl text-center md:text-left mt-16 text-gray-700">
             <span className="border-b-2 border-custom-blue">d i s c u</span>
@@ -179,12 +176,10 @@ const How_we_work = () => {
 
               {/* iamge */}
               <div className="bg-yellow w-full md:w-[100%] h-auto md:h-full relative mt-5">
-                <Image
+                <img
                   src={item.image}
                   alt="Logo"
                   className="object-cover w-full h-full"
-                  width={400}
-                  height={400}
                 />
                 <div className="font-bold md:text-md text-center md:text-left mt-16 text-gray-500">
                   <span className="border-b-2 border-custom-blue">
