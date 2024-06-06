@@ -1,6 +1,7 @@
 // Header.js
 "use client";
 import { useState, useEffect } from "react";
+import Image from "next/image";
 // import Image from "next/image";
 import Link from "next/link";
 
@@ -42,7 +43,13 @@ const Header = () => {
         <div className="flex justify-between items-center w-5/6 m-auto py-2">
           {/* Left Side: Logo */}
           <div className="flex justify-center items-center">
-            <img src="/logos/logo.png" alt="Logo" className="w-25 h-auto" />
+            <Image
+              src="/logos/logo.png"
+              alt="Logo"
+              className="w-25 h-auto"
+              width={200}
+              height={200}
+            />
           </div>
 
           {/* Center: Navigation Links */}
@@ -167,7 +174,7 @@ const Header = () => {
                                 href="/WebApp/#section4"
                                 className="hover:text-custom-blue hover:border-b-2 hover:border-custom-blue"
                               >
-                                WHAT'S IMPORTANT
+                                WHAT&apos;S IMPORTANT
                               </Link>
                             </li>
                             <li>
@@ -428,7 +435,7 @@ const Header = () => {
                               href="/WebApp/#section4"
                               className="hover:text-custom-blue hover:border-b-2 hover:border-custom-blue"
                             >
-                              WHAT'S IMPORTANT
+                              WHAT&apos;S IMPORTANT
                             </Link>
                           </li>
                           <li>

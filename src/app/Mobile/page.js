@@ -63,10 +63,12 @@ const MobileApp = () => {
         </div>
         {/* iamge */}
         <div className="bg-yellow w-full md:w-[50%] h-auto md:h-full relative">
-          <img
+          <Image
             src="/backgrounds/unsplash1.png"
             alt="Logo"
             className="object-cover w-full h-full"
+            width={400}
+            height={400}
           />
         </div>
       </div>
@@ -145,7 +147,12 @@ const MobileApp = () => {
             {Mobileapps.map((items) => {
               return (
                 <div className=" bg-gray-200 rounded-md border-black p-10 text-center flex flex-col justify-between items-center gap-4">
-                  <img src={items.image} />
+                  <Image
+                    src={items.image}
+                    alt="image"
+                    width={200}
+                    height={200}
+                  />
                   <span>{items.name}</span>
                 </div>
               );
@@ -157,10 +164,12 @@ const MobileApp = () => {
       <div id="mobilesection5"></div>
       <div className="relative bg-gray-200  mt-20" style={{ height: "2400px" }}>
         <div className="relative " style={{ width: "100vw" }}>
-          <img
+          <Image
             className="w-full"
             src="/backgrounds/Rectangle-68.png"
             alt="Background"
+            width={400}
+            height={400}
           />
           <div className="absolute top-0 w-full text-center px-4">
             <div className="text-3xl font-bold mt-20">
@@ -254,7 +263,13 @@ const MobileApp = () => {
             {Mobileappslogo.map((items) => {
               return (
                 <div className="border-2 border-gray-300 px-16 py-10 text-center flex flex-col gap-12 justify-between items-center rounded-lg ">
-                  <img src={items.image} className="rounded-lg" />
+                  <Image
+                    src={items.image}
+                    className="rounded-lg"
+                    alt="image"
+                    width={200}
+                    height={200}
+                  />
                   <span className="font-bold">{items.name}</span>
                 </div>
               );
@@ -275,10 +290,12 @@ const MobileApp = () => {
           style={{ backgroundColor: "rgb(164, 189, 247)" }}
         >
           <div className="bg-yellow w-full md:w-[50%] h-auto md:h-full relative">
-            <img
+            <Image
               src="/backgrounds/app2.png"
               alt="Logo"
               className="object-cover w-full h-full"
+              width={400}
+              height={400}
             />
           </div>
           <div className="flex flex-col justify-center items-center md:items-start gap-y-5 text-center md:text-left md:w-[50%]">
@@ -324,19 +341,23 @@ const MobileApp = () => {
 
           {/* iamge */}
           <div className="bg-yellow w-full md:w-[50%] h-auto md:h-full relative">
-            <img
+            <Image
               src="/backgrounds/app3.png"
               alt="Logo"
               className="object-cover w-full h-full"
+              width={400}
+              height={400}
             />
           </div>
         </div>
         <div className="flex flex-col md:flex-row justify-center items-center px-6 md:px-32 mt-20 md:mt-20 gap-y-8 md:gap-x-8 bg-blue-300 md:w-5/6 m-auto p-8 rounded-md">
           <div className="bg-yellow w-full md:w-[50%] h-auto md:h-full relative">
-            <img
+            <Image
               src="/backgrounds/app1.png"
               alt="Logo"
               className="object-cover w-full h-full"
+              width={400}
+              height={400}
             />
           </div>
           <div className="flex flex-col justify-center items-center md:items-start gap-y-5 text-center md:text-left md:w-[50%]">
