@@ -521,7 +521,7 @@ export default function Home() {
       {/* Slider */}
       <Carousal />
       <Contactform />
-      <Contactform />
+      {/* <Contactform /> */}
     </div>
   );
 }
