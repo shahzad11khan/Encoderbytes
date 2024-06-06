@@ -299,7 +299,7 @@ export default function Home() {
           </div>
           <div className="flex flex-col items-center md:items-start">
             <div className="text-2xl md:text-3xl font-semibold text-center md:text-left">
-              AN INDUSTRY'S EMPLOYEES
+              AN INDUSTRY&apos;S EMPLOYEES
             </div>
             <div className="flex items-center gap-2 text-center md:text-left">
               <div className="text-2xl md:text-3xl font-bold text-custom-blue">
@@ -412,7 +412,7 @@ export default function Home() {
           </div>
           <div className="">
             <button className="hover:text-custom-blue hover:bg-transparent px-3 my-2 py-2 font-bold rounded-md border-2 bg-custom-blue text-white border-custom-blue">
-              LET'S DISCUSS
+              LET&apos;S DISCUSS
             </button>
           </div>
         </div>

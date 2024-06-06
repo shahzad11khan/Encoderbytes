@@ -3,6 +3,7 @@ import Top from "../Utils/Top";
 import Link from "next/link";
 import { Howwework } from "../components/Howwework";
 import Contactform from "../Utils/Contactform";
+import Image from "next/image";
 const How_we_work = () => {
   return (
     <div className=" bg-white">

@@ -118,8 +118,8 @@ const page = () => {
                     <p className="text-wrap card-text box-content mt-3 text-md text-custom-blue">
                       Our team consists of Super programmers. World Class
                       business analysts. Creative designers and problem solvers.
-                      There's hardly a software app development challenge that
-                      our team cannot tackle.
+                      There&apos;s hardly a software app development challenge
+                      that our team cannot tackle.
                     </p>
                   </div>
                 </div>
@@ -217,7 +217,7 @@ const page = () => {
           <Link href="#form">
             <div className="">
               <button className="hover:text-custom-blue hover:bg-transparent px-5 my-2 py-4  font-bold rounded-md border-2 bg-custom-blue text-white border-custom-blue">
-                LET'S &nbsp; DISCUSS
+                LET&apos;S &nbsp; DISCUSS
               </button>
             </div>
           </Link>
@@ -262,8 +262,9 @@ const page = () => {
           </div>
           <p className="mx-64 mt-5 text-center w-4/6 text-md">
             Our team consists of Super programmers. World Class business
-            analysts. Creative designers and problem solvers. There's hardly a
-            software app development challenge that our team cannot tackle.
+            analysts. Creative designers and problem solvers. There&apos;s
+            hardly a software app development challenge that our team cannot
+            tackle.
           </p>
         </div>
       </div>
