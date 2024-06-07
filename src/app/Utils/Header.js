@@ -289,7 +289,6 @@ const Header = () => {
             </div>
             <Link
               href="/Blog"
-              // className="text-white mr-4 hover:text-gray-300 hover:border-b hover:border-custom-blue"
               onClick={() => setTabOpened("Blog")}
               className={`mr-4 hover:border-b hover:border-custom-blue ${
                 tabOpened === "Blog" ? "text-blue-700" : "text-white"
@@ -299,7 +298,6 @@ const Header = () => {
             </Link>
             <Link
               href="/How_we_Work"
-              // className="text-white mr-4 hover:text-gray-300 hover:border-b hover:border-custom-blue"
               onClick={() => setTabOpened("How_we_Work")}
               className={`mr-4 hover:border-b hover:border-custom-blue ${
                 tabOpened === "How_we_Work" ? "text-blue-700" : "text-white"
@@ -360,18 +358,27 @@ const Header = () => {
           <Link
             href="/"
             className="block text-white py-2 px-4 hover:bg-gray-700 hover:border-b hover:border-custom-blue"
+            onClick={() => {
+              setMobileMenuOpen(!isMobileMenuOpen);
+            }}
           >
             HOME
           </Link>
           <Link
             href="/About"
             className="block text-white py-2 px-4 hover:bg-gray-700 hover:border-b hover:border-custom-blue"
+            onClick={() => {
+              setMobileMenuOpen(!isMobileMenuOpen);
+            }}
           >
             ABOUT
           </Link>
           <Link
             href="/Projects"
             className="block text-white py-2 px-4 hover:bg-gray-700 hover:border-b hover:border-custom-blue"
+            onClick={() => {
+              setMobileMenuOpen(!isMobileMenuOpen);
+            }}
           >
             PROJECTS
           </Link>
@@ -385,7 +392,10 @@ const Header = () => {
             </button>
 
             {isProjectsDropdownOpen && (
-              <div className="absolute left-0 mt-5 w-full border rounded-md shadow-lg z-10 bg-custom-blue">
+              <div
+                className="absolute left-0 mt-5 w-full border rounded-md shadow-lg z-10 bg-custom-blue"
+                onClick={closeProjectsDropdown}
+              >
                 <div
                   className="p-2 mt-1 w-full pb-6"
                   style={{ backgroundColor: "rgba(0,0,0,0.8)" }}
@@ -553,18 +563,27 @@ const Header = () => {
           <Link
             href="#"
             className="block text-white py-2 px-4 hover:bg-gray-700 hover:border-b hover:border-custom-blue"
+            onClick={() => {
+              setMobileMenuOpen(!isMobileMenuOpen);
+            }}
           >
             BLOG
           </Link>
           <Link
             href="/How_we_Work"
             className="block text-white py-2 px-4 hover:bg-gray-700 hover:border-b hover:border-custom-blue"
+            onClick={() => {
+              setMobileMenuOpen(!isMobileMenuOpen);
+            }}
           >
             HOW WE WORK
           </Link>
           <Link
             href="/Career"
             className="block text-white py-2 px-4 hover:bg-gray-700 hover:border-b hover:border-custom-blue"
+            onClick={() => {
+              setMobileMenuOpen(!isMobileMenuOpen);
+            }}
           >
             CAREER
           </Link>
