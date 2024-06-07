@@ -391,7 +391,7 @@ const Header = () => {
               <span className="ml-1">&#9662;</span>
             </button>
 
-            {isProjectsDropdownOpen && (
+            {/* {isProjectsDropdownOpen && (
               <div
                 className="absolute left-0 mt-5 w-full border rounded-md shadow-lg z-10 bg-custom-blue"
                 onClick={closeProjectsDropdown}
@@ -400,6 +400,174 @@ const Header = () => {
                   className="p-2 mt-1 w-full pb-6"
                   style={{ backgroundColor: "rgba(0,0,0,0.8)" }}
                 >
+                  <div className="flex w-4/6 m-auto mt-10 text-2xl font-bold text-white">
+                    <span className="border-b-2 border-custom-blue">
+                      SERVICES WE
+                    </span>
+                    <span>&nbsp;PROVIDE</span>
+                  </div>
+                  <div className="flex flex-col md:flex w-4/6 justify-between m-auto mt-2">
+                    <div className="text-start p-3">
+                      <div className="font-bold text-white">
+                        <Link href="/Mobile">MOBILE APP DEVELOPMENT</Link>
+                      </div>
+                      <div className="text-white text-sm mt-3">
+                        <ul>
+                          <li>
+                            <Link
+                              href="/Mobile/#mobilesection3"
+                              className="hover:text-custom-blue hover:border-b-2 hover:border-custom-blue"
+                            >
+                              DEVELOPMENT SERVICES
+                            </Link>
+                          </li>
+                          <li>
+                            <Link
+                              href="/Mobile/#mobilesection4"
+                              className="hover:text-custom-blue hover:border-b-2 hover:border-custom-blue"
+                            >
+                              SERVICES FOR DIFF INDUSTRIES
+                            </Link>
+                          </li>
+                          <li>
+                            <Link
+                              href="/Mobile/#mobilesection5"
+                              className="hover:text-custom-blue hover:border-b-2 hover:border-custom-blue"
+                            >
+                              DEVELOPMENT PROCESS
+                            </Link>
+                          </li>
+                          <li>
+                            <Link
+                              href="/Mobile/#mobilesection6"
+                              className="hover:text-custom-blue hover:border-b-2 hover:border-custom-blue"
+                            >
+                              DEVELOPMENT COST
+                            </Link>
+                          </li>
+                          <li>
+                            <Link
+                              href="/Mobile/#mobilesection7"
+                              className="hover:text-custom-blue hover:border-b-2 hover:border-custom-blue"
+                            >
+                              TOOLS & TECHNOLOGIES
+                            </Link>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div className="text-start p-3">
+                      <div className="font-bold text-white">
+                        <Link href="/WebApp">WEB DEVELOPMENT</Link>
+                      </div>
+                      <div className="text-white text-sm mt-3">
+                        <ul>
+                          <li>
+                            <Link
+                              href="/WebApp/#section3"
+                              className="hover:text-custom-blue hover:border-b-2 hover:border-custom-blue"
+                            >
+                              DEVELOPMENT SERVICES
+                            </Link>
+                          </li>
+                          <li>
+                            <Link
+                              href="/WebApp/#section4"
+                              className="hover:text-custom-blue hover:border-b-2 hover:border-custom-blue"
+                            >
+                              WHAT&apos;S IMPORTANT
+                            </Link>
+                          </li>
+                          <li>
+                            <Link
+                              href="/WebApp/#section5"
+                              className="hover:text-custom-blue hover:border-b-2 hover:border-custom-blue"
+                            >
+                              INTELLECTUAL PROPERTY PROTECTION
+                            </Link>
+                          </li>
+                          <li>
+                            <Link
+                              href="/WebApp/#section6"
+                              className="hover:text-custom-blue hover:border-b-2 hover:border-custom-blue"
+                            >
+                              DEVELOP FOR VARIETY OF INDUSTRIES
+                            </Link>
+                          </li>
+                          <li>
+                            <Link
+                              href="/WebApp/#section7"
+                              className="hover:text-custom-blue hover:border-b-2 hover:border-custom-blue"
+                            >
+                              TOOLS & TECHNOLOGIES
+                            </Link>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div className="text-start p-3">
+                      <div className="font-bold text-white">
+                        <Link href="/Ai">ARTIFICIAL INTELLIGENCE</Link>
+                      </div>
+                      <div className="text-white text-sm mt-3">
+                        <ul>
+                          <li>
+                            <Link
+                              href="/Ai/#section3"
+                              className="hover:text-custom-blue hover:border-b-2 hover:border-custom-blue"
+                            >
+                              DEVELOPMENT SERVICES
+                            </Link>
+                          </li>
+                          <li>
+                            <Link
+                              href="/Ai/#section4"
+                              className="hover:text-custom-blue hover:border-b-2 hover:border-custom-blue"
+                            >
+                              TOOLS & TECHNOLOGIES
+                            </Link>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div className="text-start p-3">
+                      <div className="font-bold text-white">
+                        <Link href="/Uiux">UI / UX</Link>
+                      </div>
+                      <div className="text-white text-sm mt-3">
+                        <ul>
+                          <li>
+                            <Link
+                              href="#"
+                              className="hover:text-custom-blue hover:border-b-2 hover:border-custom-blue"
+                            >
+                              DESIGN PROCESS
+                            </Link>
+                          </li>
+                          <li>
+                            <Link
+                              href="#"
+                              className="hover:text-custom-blue hover:border-b-2 hover:border-custom-blue"
+                            >
+                              TOOLS & TECHNOLOGIES
+                            </Link>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            )} */}
+            {isProjectsDropdownOpen && (
+              <div
+                className="absolute left-0 mt-5 w-full border rounded-md shadow-lg z-10 bg-custom-blue"
+                onClick={() => {
+                  closeProjectsDropdown();
+                  setMobileMenuOpen(!isMobileMenuOpen);
+                }}
+              >
+                <div className="p-2 mt-1 w-full pb-6 bg-black bg-opacity-80 md:max-h-none md:overflow-visible max-h-96 overflow-y-auto">
                   <div className="flex w-4/6 m-auto mt-10 text-2xl font-bold text-white">
                     <span className="border-b-2 border-custom-blue">
                       SERVICES WE

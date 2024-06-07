@@ -9,7 +9,7 @@ import { FaGithubSquare } from "react-icons/fa";
 const page = () => {
   return (
     <div className=" bg-white">
-      {/* <Top /> */}
+      <Top />
       <div
         className="max-w-full h-auto flex justify-center items-center"
         style={{
