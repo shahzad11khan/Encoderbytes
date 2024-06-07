@@ -290,6 +290,8 @@ export default function Home() {
             src="/backgrounds/induz-a-industrial-category-wordpress-theme.png"
             alt="Logo"
             className="object-cover w-full h-full"
+            width={400}
+            height={400}
           />
         </div>
         <div className="flex flex-col justify-center items-center md:items-start gap-y-5 text-center md:text-left md:w-[50%]">
