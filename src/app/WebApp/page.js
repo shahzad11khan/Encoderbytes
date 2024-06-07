@@ -350,6 +350,8 @@ const WebAPP = () => {
               src="/backgrounds/app3.png"
               alt="Logo"
               className="object-cover w-full h-full"
+              width={400}
+              height={400}
             />
           </div>
         </div>

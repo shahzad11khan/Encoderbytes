@@ -8,6 +8,7 @@ const Header = () => {
   const [isSticky, setIsSticky] = useState(false);
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [isProjectsDropdownOpen, setProjectsDropdownOpen] = useState(false);
+  const [tabOpened, setTabOpened] = useState("Home");
 
   useEffect(() => {
     const handleScroll = () => {
@@ -30,6 +31,9 @@ const Header = () => {
 
   const toggleProjectsDropdown = () => {
     setProjectsDropdownOpen(!isProjectsDropdownOpen);
+  };
+  const closeProjectsDropdown = () => {
+    setProjectsDropdownOpen(false);
   };
 
   return (
@@ -54,20 +58,32 @@ const Header = () => {
           {/* Center: Navigation Links */}
           <div className="hidden md:flex flex-grow justify-center text-md gap-3">
             <Link
+              onClick={() => setTabOpened("Home")}
               href="/"
-              className="text-white mr-4 hover:text-gray-300 hover:border-b hover:border-custom-blue"
+              // className="text-white mr-4 hover:text-gray-300 hover:border-b hover:border-custom-blue"
+              className={`mr-4 hover:border-b hover:border-custom-blue ${
+                tabOpened === "Home" ? "text-blue-700" : "text-white"
+              }`}
             >
               HOME
             </Link>
             <Link
+              onClick={() => setTabOpened("About")}
               href="/About"
-              className="text-white mr-4 hover:text-gray-300 hover:border-b hover:border-custom-blue"
+              className={`mr-4 hover:border-b hover:border-custom-blue ${
+                tabOpened === "About" ? "text-blue-700" : "text-white"
+              }`}
+              // className="text-white mr-4 hover:text-gray-300 hover:border-b hover:border-custom-blue"
             >
               ABOUT
             </Link>
             <Link
+              onClick={() => setTabOpened("Projects")}
               href="/Projects"
-              className="text-white mr-4 hover:text-gray-300 hover:border-b hover:border-custom-blue"
+              // className="text-white mr-4 hover:text-gray-300 hover:border-b hover:border-custom-blue"
+              className={`mr-4 hover:border-b hover:border-custom-blue ${
+                tabOpened === "Projects" ? "text-blue-700" : "text-white"
+              }`}
             >
               PROJECTS
             </Link>
@@ -81,7 +97,10 @@ const Header = () => {
               </button>
 
               {isProjectsDropdownOpen && (
-                <div className="absolute left-0 mt-5 border rounded-md shadow-lg z-10 bg-custom-blue">
+                <div
+                  className="absolute left-0 mt-5 border rounded-md shadow-lg z-10 bg-custom-blue"
+                  onClick={closeProjectsDropdown}
+                >
                   <div
                     className="p-2 mt-1 fixed left-0 w-full pb-6 h-[400px]"
                     style={{ backgroundColor: "rgba(0,0,0,0.8)" }}
@@ -269,20 +288,32 @@ const Header = () => {
               )}
             </div>
             <Link
-              href="#"
-              className="text-white mr-4 hover:text-gray-300 hover:border-b hover:border-custom-blue"
+              href="/Blog"
+              // className="text-white mr-4 hover:text-gray-300 hover:border-b hover:border-custom-blue"
+              onClick={() => setTabOpened("Blog")}
+              className={`mr-4 hover:border-b hover:border-custom-blue ${
+                tabOpened === "Blog" ? "text-blue-700" : "text-white"
+              }`}
             >
               BLOG
             </Link>
             <Link
               href="/How_we_Work"
-              className="text-white mr-4 hover:text-gray-300 hover:border-b hover:border-custom-blue"
+              // className="text-white mr-4 hover:text-gray-300 hover:border-b hover:border-custom-blue"
+              onClick={() => setTabOpened("How_we_Work")}
+              className={`mr-4 hover:border-b hover:border-custom-blue ${
+                tabOpened === "How_we_Work" ? "text-blue-700" : "text-white"
+              }`}
             >
               HOW WE WORK
             </Link>
             <Link
               href="/Career"
-              className="text-white mr-4 hover:text-gray-300 hover:border-b hover:border-custom-blue"
+              // className="text-white mr-4 hover:text-gray-300 hover:border-b hover:border-custom-blue"
+              onClick={() => setTabOpened("Career")}
+              className={`mr-4 hover:border-b hover:border-custom-blue ${
+                tabOpened === "Career" ? "text-blue-700" : "text-white"
+              }`}
             >
               CAREER
             </Link>
