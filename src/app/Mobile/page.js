@@ -268,8 +268,8 @@ const MobileApp = () => {
                     src={items.image}
                     className="rounded-lg"
                     alt="image"
-                    width={200}
-                    height={200}
+                    width={300}
+                    height={300}
                   />
                   <span className="font-bold">{items.name}</span>
                 </div>

@@ -11,7 +11,7 @@ export default function Home() {
     <div className="bg-white">
       <Top />
       <div
-        className="flex h-[760px] flex-col bg-cover relative"
+        className="flex h-[760px] flex-col bg-cover relative "
         style={{
           backgroundImage:
             "linear-gradient(rgba(0, 0, 1, 1), rgba(0, 0, 1,1)), url('/backgrounds/background-image.png')",

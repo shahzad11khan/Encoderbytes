@@ -9,9 +9,9 @@ import { FaGithubSquare } from "react-icons/fa";
 const page = () => {
   return (
     <div className=" bg-white">
-      <Top />
+      {/* <Top /> */}
       <div
-        className="max-w-full h-auto flex justify-center items-center mt-12"
+        className="max-w-full h-auto flex justify-center items-center"
         style={{
           backgroundImage:
             "linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.0)), url('/backgrounds/banner-Facebook-Cover-copy.png')",
@@ -69,7 +69,6 @@ const page = () => {
             economic and social benefits for the people.
           </p>
         </div>
-        {/* iamge */}
         <div className="bg-yellow w-full md:w-[50%] h-auto md:h-full relative">
           <Image
             src="/backgrounds/unsplash1.png"
@@ -107,8 +106,6 @@ const page = () => {
               </div>
             </div>
           </div>
-
-          {/* second cart */}
           <div className="flex flex-col justify-center mx-auto cardContent bg-white rounded-md">
             <div className="w-full mb-5 md:mb-0 lg:mb-5 md:mr-0 lg:mr-0 lg:ml-auto">
               <div className="card c1 shadow text-dark rounded-lg">
@@ -126,7 +123,6 @@ const page = () => {
               </div>
             </div>
           </div>
-          {/* 3rd cart */}
           <div className="flex flex-col justify-center mx-auto cardContent bg-white rounded-md">
             <div className="w-full mb-5 md:mb-0 lg:mb-5 md:mr-0 lg:mr-0 lg:ml-auto">
               <div className="card c1 shadow text-dark rounded-lg">
@@ -154,13 +150,11 @@ const page = () => {
             <span className="text-custom-blue">US?</span>
           </div>
           <p className="w-5/6 mt-11 text-center text-md ">
-            {/* <p className="flex mx-64 sm:w-4/6 mt-11 text-center border-2 border-black"> */}
             To ensure your business growth with timely delivery of your software
             with multiple revision, we are best fit for you
           </p>
         </div>
       </div>
-      {/* carts */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-20 pb-32 w-5/6 m-auto ">
         {AboutCarts.map((cart) => {
           return (
@@ -174,7 +168,6 @@ const page = () => {
                 </span>
                 <Image src={cart.image1} alt="Logo" width={70} height={60} />
               </div>
-              {/* <div className=""> */}
               <div className="text-2xl md:text-2xl font-bold mt-10">
                 <span className="">{cart.text1} </span>
                 <span className="text-custom-blue">{cart.text2}</span>
@@ -182,7 +175,6 @@ const page = () => {
               <p className="flex justify-center mt-6 text-gray-400 text-md">
                 {cart.description}
               </p>
-              {/* </div> */}
             </div>
           );
         })}
@@ -254,13 +246,14 @@ const page = () => {
         </div>
       </div>
       {/* section 6th team */}
+
       <div className="w-full min-h-full flex justify-center items-center mt-14">
         <div className="flex justify-center items-center flex-col mt-4">
           <div className="text-md md:text-4xl font-bold">
             MEET OUR
             <span className="text-custom-blue"> TEAM.</span>
           </div>
-          <p className="mx-64 mt-5 text-center w-4/6 text-md">
+          <p className=" mt-5 text-center w-4/6 text-md">
             Our team consists of Super programmers. World Class business
             analysts. Creative designers and problem solvers. There&apos;s
             hardly a software app development challenge that our team cannot
