@@ -39,7 +39,7 @@ const Header = () => {
   return (
     <div>
       <nav
-        className={`bg-gray-800 fixed md:top-0 left-0 w-full z-50 h-20 transition-all duration-300  ${
+        className={`bg-gray-800 fixed md:top-0 left-0 w-full z-50 h-20 transition-all duration-300 opacity-90 ${
           isSticky ? "py-2" : "p-2 lg:mt-9 mt-0"
         }`}
       >

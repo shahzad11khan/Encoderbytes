@@ -150,12 +150,7 @@ const MobileApp = () => {
                   key={items.image}
                   className=" bg-gray-200 rounded-md border-black p-10 text-center flex flex-col justify-between items-center gap-4"
                 >
-                  <Image
-                    src={items.image}
-                    alt="image"
-                    width={200}
-                    height={200}
-                  />
+                  <Image src={items.image} alt="image" width={70} height={70} />
                   <span>{items.name}</span>
                 </div>
               );
