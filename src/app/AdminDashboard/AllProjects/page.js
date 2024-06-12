@@ -1,8 +1,10 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import Header from "../components/Header";
 import Sidebar from "../components/Siderbar";
-
+import AddNewProModal from "../components/AddNewProjectModal";
 const ProjectTable = () => {
+  const [showmodal, setshowmodal] = useState(false);
   return (
     <>
       <Header className="min-w-full" />
@@ -11,7 +13,10 @@ const ProjectTable = () => {
         <div className="container mx-auto p-4">
           <div className="flex justify-between items-center mb-4">
             <h2 className="text-xl font-semibold">Projects</h2>
-            <button className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
+            <button
+              className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"
+              onClick={() => setshowmodal(true)}
+            >
               Add New Project
             </button>
           </div>
@@ -83,6 +88,7 @@ const ProjectTable = () => {
               </tbody>
             </table>
           </div>
+          {showmodal && <AddNewProModal isclose={() => setshowmodal(false)} />}
         </div>
       </div>
     </>

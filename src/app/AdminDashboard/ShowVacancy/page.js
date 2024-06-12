@@ -1,8 +1,11 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import Header from "../components/Header";
 import Sidebar from "../components/Siderbar";
+import AddVacancyModal from "../components/AddVacancyModal";
 
 const VacancyTable = () => {
+  const [showmodal, setshowmodal] = useState(false);
   return (
     <>
       <Header className="min-w-full" />
@@ -11,7 +14,10 @@ const VacancyTable = () => {
         <div className="container mx-auto p-4">
           <div className="flex justify-between items-center mb-4">
             <h2 className="text-xl font-semibold">Vacancies</h2>
-            <button className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
+            <button
+              className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"
+              onClick={() => setshowmodal(true)}
+            >
               Add New Vacancy
             </button>
           </div>
@@ -50,6 +56,7 @@ const VacancyTable = () => {
               </tbody>
             </table>
           </div>
+          {showmodal && <AddVacancyModal isclose={() => setshowmodal(false)} />}
         </div>
       </div>
     </>

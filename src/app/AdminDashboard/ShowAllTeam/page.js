@@ -1,8 +1,11 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import Header from "../components/Header";
 import Sidebar from "../components/Siderbar";
+import AddNewMemModal from "../components/AddNewMemModal";
 
 const ShowAllTeam = () => {
+  const [showmodal, setshowmodal] = useState(false);
   return (
     <>
       <Header className="min-w-full" />
@@ -11,7 +14,10 @@ const ShowAllTeam = () => {
         <div className="container mx-auto p-4">
           <div className="flex justify-between items-center mb-4">
             <h2 className="text-xl font-semibold">All Team List</h2>
-            <button className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
+            <button
+              className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"
+              onClick={() => setshowmodal(true)}
+            >
               Add New Member
             </button>
           </div>
@@ -22,7 +28,7 @@ const ShowAllTeam = () => {
                   <th className="border px-4 py-2">S.No</th>
                   <th className="border px-4 py-2">User</th>
                   <th className="border px-4 py-2">Email</th>
-                  <th className="border px-4 py-2">Phone</th>
+                  <th className="border px-4 py-2">Designation</th>
                   <th className="border px-4 py-2">Edit</th>
                   <th className="border px-4 py-2">Delete</th>
                 </tr>
@@ -33,7 +39,7 @@ const ShowAllTeam = () => {
                   <td className="border px-4 py-2 text-center">1</td>
                   <td className="border px-4 py-2">John Doe</td>
                   <td className="border px-4 py-2">john.doe@example.com</td>
-                  <td className="border px-4 py-2">123-456-7890</td>
+                  <td className="border px-4 py-2">Coo</td>
                   <td className="border px-4 py-2 text-center">
                     <button className="bg-yellow-500 text-white px-2 py-1 rounded hover:bg-yellow-600">
                       Edit
@@ -49,6 +55,7 @@ const ShowAllTeam = () => {
               </tbody>
             </table>
           </div>
+          {showmodal && <AddNewMemModal isclose={() => setshowmodal(false)} />}
         </div>
       </div>
     </>
