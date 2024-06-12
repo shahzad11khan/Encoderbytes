@@ -10,7 +10,7 @@ const Header = () => {
   };
 
   return (
-    <header className="bg-gray-800 text-white py-4 px-6 flex items-center justify-between opacity-90 w-full">
+    <header className="bg-custom-blue text-white py-4 px-6 flex items-center justify-between opacity-90 w-full">
       {/* Left side: Logo */}
       <div className="flex items-center">
         <Image
