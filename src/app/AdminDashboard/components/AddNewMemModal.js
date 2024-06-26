@@ -1,14 +1,9 @@
+import axios from "axios";
 import React, { useRef, useEffect, useState, useCallback } from "react";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 const AddNewMemModal = ({ isclose }) => {
-  const [formData, setFormData] = useState({
-    UserName: "",
-    Email: "",
-    Designation: "",
-    Image: "",
-  });
   const modalRef = useRef();
 
   const handleClose = (e) => {
@@ -32,56 +27,56 @@ const AddNewMemModal = ({ isclose }) => {
       document.removeEventListener("keydown", handleKeyDown);
     };
   }, [handleKeyDown]);
+  //
+
+  const [formData, setFormData] = useState({
+    UserName: "",
+    Email: "",
+    Designation: "",
+    file: null,
+  });
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
-    setFormData({
-      ...formData,
+    setFormData((prevData) => ({
+      ...prevData,
       [name]: value,
-    });
+    }));
+  };
+
+  const handleFileChange = (e) => {
+    const file = e.target.files[0];
+    setFormData((prevData) => ({
+      ...prevData,
+      file: file || null,
+    }));
   };
 
   const sendMessage = async () => {
-    // Assuming formData is an object containing SenderEmail and SenderMessage properties
-    const _obj = {
-      UserName: formData.UserName,
-      Email: formData.Email,
-      Designation: formData.Password,
-      Image: formData.Image,
-    };
-
-    console.log(_obj);
-
-    // Here you can add your logic to send the message, e.g., API call
     try {
-      const response = await fetch(`/api/messages`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(_obj),
-      });
-
-      if (!response.ok) {
-        throw new Error("Network response was not ok");
+      const formDataToSend = new FormData();
+      formDataToSend.append("username", formData.UserName);
+      formDataToSend.append("email", formData.Email);
+      formDataToSend.append("designation", formData.Designation);
+      if (formData.file) {
+        formDataToSend.append("image", formData.file);
       }
 
-      const data = await response.json();
-      console.log(data);
-      toast.success("Message submitted successfully");
-      isclose();
-      // Reset form data after successful sending
-      setFormData({
-        UserName: "",
-        Email: "",
-        Designation: "",
-      });
+      const response = await axios.post("/api/Team", formDataToSend);
+
+      if (!response.data.success) {
+        throw new Error(
+          response.data.message || "Failed to create team member"
+        );
+      } else {
+        isclose(); // Close the popup window
+        toast.success("Team member created successfully!");
+      }
     } catch (error) {
-      console.error("Error fetching or parsing messages:", error);
-      // Handle error gracefully, you might want to display an error message to the user
+      toast.error(error.message || "Failed to create admin");
     }
   };
-
+  //
   return (
     <div
       ref={modalRef}
@@ -155,6 +150,8 @@ const AddNewMemModal = ({ isclose }) => {
             <label class="block">
               <span className="text-gray-950">Upload file</span>
               <input
+                onChange={handleFileChange}
+                name="Image"
                 type="file"
                 class="mt-1 block w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-blue-50 file:text-blue-700 hover:file:bg-blue-100"
               />

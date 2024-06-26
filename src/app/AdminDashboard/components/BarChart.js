@@ -25,7 +25,7 @@ const BarChart = ({ data }) => {
               data: data.values,
               backgroundColor: "rgba(54, 162, 235, 0.5)", // Adjust color as needed
               borderColor: "rgba(54, 162, 235, 1)", // Adjust color as needed
-              borderWidth: 1,
+              borderWidth: 4,
             },
           ],
         },

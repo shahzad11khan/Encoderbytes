@@ -3,24 +3,24 @@ const mongoose = require("mongoose");
 
 // Define the user schema
 const teamSchema = new mongoose.Schema({
-  UserName: {
+  username: {
     type: String,
     required: true,
     trim: true,
   },
-  Email: {
+  email: {
     type: String,
     required: true,
     unique: true,
     trim: true,
     match: [/.+\@.+\..+/, "Please fill a valid email address"],
   },
-  Designation: {
+  designation: {
     type: String,
     trim: true,
   },
 
-  Image: {
+  image: {
     type: String,
     required: false,
   },

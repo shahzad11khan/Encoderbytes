@@ -1,15 +1,10 @@
+// export default Modal;
 import React, { useRef, useEffect, useState, useCallback } from "react";
+import axios from "axios";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 const Modal = ({ isclose }) => {
-  const [formData, setFormData] = useState({
-    UserName: "",
-    Email: "",
-    Password: "",
-    ConformPassword: "",
-    Image: "",
-  });
   const modalRef = useRef();
 
   const handleClose = (e) => {
@@ -34,54 +29,51 @@ const Modal = ({ isclose }) => {
     };
   }, [handleKeyDown]);
 
+  const [formData, setFormData] = useState({
+    UserName: "",
+    Email: "",
+    Password: "",
+    ConformPassword: "",
+    file: null,
+  });
+
   const handleInputChange = (e) => {
     const { name, value } = e.target;
-    setFormData({
-      ...formData,
+    setFormData((prevData) => ({
+      ...prevData,
       [name]: value,
-    });
+    }));
+  };
+
+  const handleFileChange = (e) => {
+    const file = e.target.files[0];
+    setFormData((prevData) => ({
+      ...prevData,
+      file: file || null,
+    }));
   };
 
   const sendMessage = async () => {
-    // Assuming formData is an object containing SenderEmail and SenderMessage properties
-    const _obj = {
-      UserName: formData.UserName,
-      Email: formData.Email,
-      Password: formData.Password,
-      ConformPassword: formData.ConformPassword,
-      Image: formData.Image,
-    };
-
-    console.log(_obj);
-
-    // Here you can add your logic to send the message, e.g., API call
     try {
-      const response = await fetch(`/api/messages`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(_obj),
-      });
-
-      if (!response.ok) {
-        throw new Error("Network response was not ok");
+      const formDataToSend = new FormData();
+      formDataToSend.append("username", formData.UserName);
+      formDataToSend.append("email", formData.Email);
+      formDataToSend.append("password", formData.Password);
+      formDataToSend.append("confirmpassword", formData.ConformPassword);
+      if (formData.file) {
+        formDataToSend.append("Image", formData.file);
       }
 
-      const data = await response.json();
-      console.log(data);
-      toast.success("Message submitted successfully");
-      isclose();
-      // Reset form data after successful sending
-      setFormData({
-        UserName: "",
-        Email: "",
-        Password: "",
-        ConformPassword: "",
-      });
+      const response = await axios.post("/api/Users/singup", formDataToSend);
+
+      if (!response.data.success) {
+        throw new Error(response.data.message || "Failed to create admin");
+      } else {
+        isclose(); // Close the popup window
+        toast.success("Admin created successfully!");
+      }
     } catch (error) {
-      console.error("Error fetching or parsing messages:", error);
-      // Handle error gracefully, you might want to display an error message to the user
+      toast.error(error.message || "Failed to create admin");
     }
   };
 
@@ -167,12 +159,14 @@ const Modal = ({ isclose }) => {
             />
           </div>
         </section>
-        <div class="mt-1 px-3 py-1.5 w-full rounded-md border-gray-400 border focus:outline-none focus:border-indigo-500 text-black">
-          <label class="block">
+        <div className="mt-1 px-3 py-1.5 w-full rounded-md border-gray-400 border focus:outline-none focus:border-indigo-500 text-black">
+          <label className="block" htmlFor="file">
             <span className="text-gray-950">Upload file</span>
             <input
+              onChange={handleFileChange}
               type="file"
-              class="mt-1 block w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-blue-50 file:text-blue-700 hover:file:bg-blue-100"
+              id="file"
+              className="mt-1 block w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-blue-50 file:text-blue-700 hover:file:bg-blue-100"
             />
           </label>
         </div>

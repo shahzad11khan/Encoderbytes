@@ -13,6 +13,11 @@ const projectSchema = new mongoose.Schema({
     required: true,
     trim: true,
   },
+  ProjectDescription: {
+    type: String,
+    required: true,
+    trim: true,
+  },
   Image: {
     type: String,
     required: false,

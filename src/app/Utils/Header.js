@@ -58,7 +58,10 @@ const Header = () => {
           {/* Center: Navigation Links */}
           <div className="hidden md:flex flex-grow justify-center text-md gap-3">
             <Link
-              onClick={() => setTabOpened("Home")}
+              onClick={() => {
+                setTabOpened("Home");
+                setProjectsDropdownOpen(!isProjectsDropdownOpen);
+              }}
               href="/"
               // className="text-white mr-4 hover:text-gray-300 hover:border-b hover:border-custom-blue"
               className={`mr-4 hover:border-b hover:border-custom-blue ${
@@ -68,7 +71,10 @@ const Header = () => {
               HOME
             </Link>
             <Link
-              onClick={() => setTabOpened("About")}
+              onClick={() => {
+                setTabOpened("About");
+                setProjectsDropdownOpen(!isProjectsDropdownOpen);
+              }}
               href="/About"
               className={`mr-4 hover:border-b hover:border-custom-blue ${
                 tabOpened === "About" ? "text-blue-700" : "text-white"
@@ -78,7 +84,10 @@ const Header = () => {
               ABOUT
             </Link>
             <Link
-              onClick={() => setTabOpened("Projects")}
+              onClick={() => {
+                setTabOpened("Projects");
+                setProjectsDropdownOpen(!isProjectsDropdownOpen);
+              }}
               href="/Projects"
               // className="text-white mr-4 hover:text-gray-300 hover:border-b hover:border-custom-blue"
               className={`mr-4 hover:border-b hover:border-custom-blue ${
@@ -289,7 +298,10 @@ const Header = () => {
             </div>
             <Link
               href="/Blog"
-              onClick={() => setTabOpened("Blog")}
+              onClick={() => {
+                setTabOpened("Blog");
+                setProjectsDropdownOpen(!isProjectsDropdownOpen);
+              }}
               className={`mr-4 hover:border-b hover:border-custom-blue ${
                 tabOpened === "Blog" ? "text-blue-700" : "text-white"
               }`}
@@ -298,7 +310,10 @@ const Header = () => {
             </Link>
             <Link
               href="/How_we_Work"
-              onClick={() => setTabOpened("How_we_Work")}
+              onClick={() => {
+                setTabOpened("How_we_Work");
+                setProjectsDropdownOpen(!isProjectsDropdownOpen);
+              }}
               className={`mr-4 hover:border-b hover:border-custom-blue ${
                 tabOpened === "How_we_Work" ? "text-blue-700" : "text-white"
               }`}
@@ -308,7 +323,10 @@ const Header = () => {
             <Link
               href="/Career"
               // className="text-white mr-4 hover:text-gray-300 hover:border-b hover:border-custom-blue"
-              onClick={() => setTabOpened("Career")}
+              onClick={() => {
+                setTabOpened("Career");
+                setProjectsDropdownOpen(!isProjectsDropdownOpen);
+              }}
               className={`mr-4 hover:border-b hover:border-custom-blue ${
                 tabOpened === "Career" ? "text-blue-700" : "text-white"
               }`}
@@ -391,174 +409,6 @@ const Header = () => {
               <span className="ml-1">&#9662;</span>
             </button>
 
-            {/* {isProjectsDropdownOpen && (
-              <div
-                className="absolute left-0 mt-5 w-full border rounded-md shadow-lg z-10 bg-custom-blue"
-                onClick={closeProjectsDropdown}
-              >
-                <div
-                  className="p-2 mt-1 w-full pb-6"
-                  style={{ backgroundColor: "rgba(0,0,0,0.8)" }}
-                >
-                  <div className="flex w-4/6 m-auto mt-10 text-2xl font-bold text-white">
-                    <span className="border-b-2 border-custom-blue">
-                      SERVICES WE
-                    </span>
-                    <span>&nbsp;PROVIDE</span>
-                  </div>
-                  <div className="flex flex-col md:flex w-4/6 justify-between m-auto mt-2">
-                    <div className="text-start p-3">
-                      <div className="font-bold text-white">
-                        <Link href="/Mobile">MOBILE APP DEVELOPMENT</Link>
-                      </div>
-                      <div className="text-white text-sm mt-3">
-                        <ul>
-                          <li>
-                            <Link
-                              href="/Mobile/#mobilesection3"
-                              className="hover:text-custom-blue hover:border-b-2 hover:border-custom-blue"
-                            >
-                              DEVELOPMENT SERVICES
-                            </Link>
-                          </li>
-                          <li>
-                            <Link
-                              href="/Mobile/#mobilesection4"
-                              className="hover:text-custom-blue hover:border-b-2 hover:border-custom-blue"
-                            >
-                              SERVICES FOR DIFF INDUSTRIES
-                            </Link>
-                          </li>
-                          <li>
-                            <Link
-                              href="/Mobile/#mobilesection5"
-                              className="hover:text-custom-blue hover:border-b-2 hover:border-custom-blue"
-                            >
-                              DEVELOPMENT PROCESS
-                            </Link>
-                          </li>
-                          <li>
-                            <Link
-                              href="/Mobile/#mobilesection6"
-                              className="hover:text-custom-blue hover:border-b-2 hover:border-custom-blue"
-                            >
-                              DEVELOPMENT COST
-                            </Link>
-                          </li>
-                          <li>
-                            <Link
-                              href="/Mobile/#mobilesection7"
-                              className="hover:text-custom-blue hover:border-b-2 hover:border-custom-blue"
-                            >
-                              TOOLS & TECHNOLOGIES
-                            </Link>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                    <div className="text-start p-3">
-                      <div className="font-bold text-white">
-                        <Link href="/WebApp">WEB DEVELOPMENT</Link>
-                      </div>
-                      <div className="text-white text-sm mt-3">
-                        <ul>
-                          <li>
-                            <Link
-                              href="/WebApp/#section3"
-                              className="hover:text-custom-blue hover:border-b-2 hover:border-custom-blue"
-                            >
-                              DEVELOPMENT SERVICES
-                            </Link>
-                          </li>
-                          <li>
-                            <Link
-                              href="/WebApp/#section4"
-                              className="hover:text-custom-blue hover:border-b-2 hover:border-custom-blue"
-                            >
-                              WHAT&apos;S IMPORTANT
-                            </Link>
-                          </li>
-                          <li>
-                            <Link
-                              href="/WebApp/#section5"
-                              className="hover:text-custom-blue hover:border-b-2 hover:border-custom-blue"
-                            >
-                              INTELLECTUAL PROPERTY PROTECTION
-                            </Link>
-                          </li>
-                          <li>
-                            <Link
-                              href="/WebApp/#section6"
-                              className="hover:text-custom-blue hover:border-b-2 hover:border-custom-blue"
-                            >
-                              DEVELOP FOR VARIETY OF INDUSTRIES
-                            </Link>
-                          </li>
-                          <li>
-                            <Link
-                              href="/WebApp/#section7"
-                              className="hover:text-custom-blue hover:border-b-2 hover:border-custom-blue"
-                            >
-                              TOOLS & TECHNOLOGIES
-                            </Link>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                    <div className="text-start p-3">
-                      <div className="font-bold text-white">
-                        <Link href="/Ai">ARTIFICIAL INTELLIGENCE</Link>
-                      </div>
-                      <div className="text-white text-sm mt-3">
-                        <ul>
-                          <li>
-                            <Link
-                              href="/Ai/#section3"
-                              className="hover:text-custom-blue hover:border-b-2 hover:border-custom-blue"
-                            >
-                              DEVELOPMENT SERVICES
-                            </Link>
-                          </li>
-                          <li>
-                            <Link
-                              href="/Ai/#section4"
-                              className="hover:text-custom-blue hover:border-b-2 hover:border-custom-blue"
-                            >
-                              TOOLS & TECHNOLOGIES
-                            </Link>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                    <div className="text-start p-3">
-                      <div className="font-bold text-white">
-                        <Link href="/Uiux">UI / UX</Link>
-                      </div>
-                      <div className="text-white text-sm mt-3">
-                        <ul>
-                          <li>
-                            <Link
-                              href="#"
-                              className="hover:text-custom-blue hover:border-b-2 hover:border-custom-blue"
-                            >
-                              DESIGN PROCESS
-                            </Link>
-                          </li>
-                          <li>
-                            <Link
-                              href="#"
-                              className="hover:text-custom-blue hover:border-b-2 hover:border-custom-blue"
-                            >
-                              TOOLS & TECHNOLOGIES
-                            </Link>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            )} */}
             {isProjectsDropdownOpen && (
               <div
                 className="absolute left-0 mt-5 w-full border rounded-md shadow-lg z-10 bg-custom-blue"
